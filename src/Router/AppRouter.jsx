@@ -10,7 +10,7 @@ import SanatanDharm from '../pages/SanatanDharm.jsx';
 
 const AppRouter = () => {
   return (
-    <Router>
+    <div>
       <Routes>
         <Route path='/' element={ <Home/> } />
         <Route path='/about' element={ <AboutUS/> } />
@@ -19,7 +19,7 @@ const AppRouter = () => {
         <Route path='/schedule' element={<Schedule/>} />
         <Route path='/donate' element={ <DonateNow/> } />
       </Routes>
-    </Router>
+    </div>
   )
 }
 
