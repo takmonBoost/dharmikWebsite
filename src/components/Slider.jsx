@@ -2,7 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import image1 from "../assets/slider1.png"
+import image2 from "../assets/slider2.png"
 // Custom Arrow Components
 const NextArrow = ({ onClick }) => {
   return (
@@ -28,9 +29,8 @@ const PrevArrow = ({ onClick }) => {
 
 const ImageSlider = () => {
   const sliderImages = [
-    "https://vssct.com/wp-content/uploads/2024/12/delhi-ram-katha-1.jpg",
-    "https://vssct.com/wp-content/uploads/2024/12/delhi-ram-katha-1.jpg",
-    "https://vssct.com/wp-content/uploads/2024/04/banner-2.jpg",
+    image1,
+    image2,
   ];
 
   const settings = {
@@ -54,7 +54,7 @@ const ImageSlider = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fill "
             />
           </div>
         ))}
