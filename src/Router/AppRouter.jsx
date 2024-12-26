@@ -6,6 +6,8 @@ import DonateNow from "../pages/DonateNow.jsx"
 import Gallery from "../pages/Gallery.jsx"
 import Schedule from "../pages/Schedule.jsx"
 import SanatanDharm from '../pages/SanatanDharm.jsx';
+import Video from '../pages/Video.jsx';
+
 
 
 const AppRouter = () => {
@@ -13,11 +15,13 @@ const AppRouter = () => {
     <div>
       <Routes>
         <Route path='/' element={ <Home/> } />
-        <Route path='/about' element={ <AboutUS/> } />
         <Route path='/gallery' element={ <Gallery/> } />
-        <Route path='/sanatan-dharm' element={ <SanatanDharm/> } />
         <Route path='/schedule' element={<Schedule/>} />
         <Route path='/donate' element={ <DonateNow/> } />
+        <Route path='/about/aboutus' element={ <AboutUS/> } />
+        <Route path='/sanatan-dharm/events' element={ <SanatanDharm/> } />
+        <Route path='/gallery/videos' element={ <Video/> } />
+    
       </Routes>
     </div>
   )

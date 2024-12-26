@@ -3,6 +3,7 @@ import navItemsData from '../Data/NavItemsData';
 import { Link } from 'react-router-dom';
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa";
+import image1 from "../assets/logo.jpg";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
@@ -22,9 +23,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
-            src="https://via.placeholder.com/40" // Replace with your logo
+            src={image1} // Replace with your logo
             alt="Logo"
-            className="h-10 w-10"
+            className="h-32 w-24"
           />
           <span className="text-red-600 font-bold text-lg">
             VISHWA SHANTI SEWA
@@ -37,25 +38,22 @@ const Navbar = () => {
             <li key={index} className="relative group">
               <div className="flex items-center space-x-1">
                 <Link
-                  to={item.path}
-                  className="text-blue-900 font-medium transition duration-300 hover:bg-green-500 p-2 rounded-md hover:text-white"
+                  to={item.path || '#'} // Use # if there's no path for dropdown items
+                  className={`text-blue-900 font-medium transition duration-300 hover:bg-green-500 p-2 rounded-md hover:text-white ${item.dropdown ? 'cursor-pointer' : ''}`}
                 >
                   {item.title}
                 </Link>
                 {/* Dropdown Arrow */}
                 {item.dropdown && (
-                  <span className="text-gray-600 ">
+                  <span className="text-gray-600 ml-1">
                     <FaAngleDown />
                   </span>
                 )}
               </div>
-              {/* Dropdown */}
+
+              {/* Dropdown on Hover */}
               {item.dropdown && (
-                <div
-                  className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition duration-300"
-                  onMouseEnter={() => toggleDropdown(index)}
-                  onMouseLeave={() => toggleDropdown(null)}
-                >
+                <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {item.dropdown.map((subItem, subIndex) => (
                     <Link
                       key={subIndex}
@@ -103,8 +101,8 @@ const Navbar = () => {
             <li key={index} className="relative group border-b">
               <div className="flex justify-between items-center px-4 py-2">
                 <Link
-                  to={item.path}
-                  className="text-blue-900 font-medium hover:bg-green-500 p-2 rounded-md hover:text-white w-full"
+                  to={item.path || '#'} // Use # for items without a path
+                  className={`text-blue-900 font-medium hover:bg-green-500 p-2 rounded-md hover:text-white w-full ${item.dropdown ? 'cursor-pointer' : ''}`}
                 >
                   {item.title}
                 </Link>
@@ -119,7 +117,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Dropdown */}
+              {/* Dropdown on Click */}
               {item.dropdown && dropdownOpen === index && (
                 <div className="bg-gray-100">
                   {item.dropdown.map((subItem, subIndex) => (

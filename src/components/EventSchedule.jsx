@@ -16,13 +16,15 @@ const EventSchedule = () => {
             {/* Video Embed */}
             <div className="relative mb-4">
               <iframe
-                className="w-full h-full aspect-video rounded-lg"
-                src="https://vssct.com/wp-content/uploads/2024/11/CujvXGJbBXjrqbTr.mp4"
+                className="w-full h-full aspect-video rounded-lg "
+                src="https://www.youtube.com/embed/ocfEfJLXpVA"
                 title="Shrimad Bhagwat Katha Mumbai"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
+
+
             {/* Event Details */}
             <h3 className="text-2xl font-bold text-red-600 mb-2 text-center">
               श्रीमद्भागवत कथा – मुंबई
@@ -46,13 +48,12 @@ const EventSchedule = () => {
             <div className="relative mb-4">
               <iframe
                 className="w-full h-full aspect-video rounded-lg"
-                src="https://vssct.com/wp-content/uploads/2024/11/CujvXGJbBXjrqbTr.mp4"
-                title="Shree Shiv Mahapuran Katha Bangalore"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                src="https://www.youtube.com/embed/HAZgs98p1S8"
+                title="Shrimad Bhagwat Katha Mumbai"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            {/* Event Details */}
             <h3 className="text-2xl font-bold text-red-600 mb-2 text-center">
               श्रीशिव महापुराण कथा – बैंगलोर
             </h3>

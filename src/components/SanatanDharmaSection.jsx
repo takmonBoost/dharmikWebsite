@@ -1,4 +1,7 @@
 import React from "react";
+import image2 from "../assets/photo1.jpg"
+import image3 from "../assets/photo2.jpg"
+import image4 from "../assets/photo3.jpg"
 
 const SanatanDharmaSection = () => {
   return (
@@ -17,7 +20,7 @@ const SanatanDharmaSection = () => {
         {/* First Image */}
         <div className="overflow-hidden rounded-lg shadow-md">
           <img
-            src="https://vssct.com/wp-content/uploads/2024/11/BB8I4435-2048x1365.jpg" // Replace with the actual image URL
+            src={image2} // Replace with the actual image URL
             alt="Event 1"
             className="object-cover w-full h-full"
           />
@@ -26,7 +29,7 @@ const SanatanDharmaSection = () => {
         {/* Second Image */}
         <div className="overflow-hidden rounded-lg shadow-md">
           <img
-            src="https://vssct.com/wp-content/uploads/2024/11/BB8I4571-2048x1365.jpg" // Replace with the actual image URL
+            src={image3} // Replace with the actual image URL
             alt="Event 2"
             className="object-cover w-full h-full"
           />
@@ -35,7 +38,7 @@ const SanatanDharmaSection = () => {
         {/* Third Image */}
         <div className="overflow-hidden rounded-lg shadow-md ">
           <img
-            src="https://vssct.com/wp-content/uploads/2024/11/BB8I4568-2048x1365.jpg" // Replace with the actual image URL
+            src={image4} // Replace with the actual image URL
             alt="Event 3"
             className="object-cover w-full h-full"
           />

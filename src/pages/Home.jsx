@@ -10,30 +10,33 @@ import CardsSection from '../components/CardsSection.jsx'
 import UpcomingEvents from '../components/UpcomingEvents.jsx'
 import Navbar from '../components/Navbar.jsx'
 import EventSchedule from '../components/EventSchedule.jsx'
+import HeroAwardLayout from '../components/HeroAwardLayout.jsx'
+import DharmaProtectionSection from '../components/DharmaProtectionSection.jsx'
+import Footer from '../components/Footer.jsx'
 
 const Home = () => {
   const sectionTitle = "NEWS & Updates";
 
   const video1 = {
     title: "Special Announcement",
-    src: "https://vssct.com/wp-content/uploads/2024/11/CujvXGJbBXjrqbTr.mp4",
+    src: "https://www.youtube.com/embed/1noVljS4WPg",
   };
 
   const video2 = {
     title: "Latest Highlights",
-    src: "https://vssct.com/wp-content/uploads/2024/11/l6gg83umQJPHoGOR.mp4",
+    src: "https://www.youtube.com/embed/NvwGsfdRhZI",
   };
 
   const sectionTitle1 = "सनातन जागृति यात्रा  ";
 
   const video3 = {
     title: "Special Announcement",
-    src: "https://vssct.com/wp-content/uploads/2024/11/CujvXGJbBXjrqbTr.mp4",
+    src: "https://www.youtube.com/embed/0VrbcIMqBps",
   };
 
   const video4 = {
     title: "Latest Highlights",
-    src: "https://vssct.com/wp-content/uploads/2024/11/CujvXGJbBXjrqbTr.mp4",
+    src: "https://www.youtube.com/embed/QZyP-Dv-KpM",
   };
   return (
     <div>
@@ -45,7 +48,7 @@ const Home = () => {
     <Header/>
     <DonationCard/>
     <SanatanDharmaSection/>
-    {/* <NewsUpdatesSection
+    <NewsUpdatesSection
         sectionTitle={sectionTitle}
         video1={video1}
         video2={video2}
@@ -54,10 +57,13 @@ const Home = () => {
         sectionTitle={sectionTitle1}
         video1={video3}
         video2={video4}
-      /> */}
+      />
       <CardsSection/>
       <UpcomingEvents/>
       <EventSchedule/>
+      <HeroAwardLayout/>
+      <DharmaProtectionSection/>
+      <Footer/>
     </div>
   )
 } 
